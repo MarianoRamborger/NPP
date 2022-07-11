@@ -2,9 +2,10 @@ import {COLORS} from '../../Constants/colors'
 import { Button } from '../../Components';
 import {MdFacebook} from "react-icons/md";
 
-const Landing = () => {
+const Landing = ({scrollRef, scroll}) => {
 
-  return <section id='landing'>
+
+  return <section id='landing' ref={scrollRef}>
 
     <div className='landing-banner'>
 
@@ -29,10 +30,10 @@ const Landing = () => {
        
 
         <nav className="landing-nav"> 
-          <Button type='secondary' width={250} > Podcasts </Button>
-          <Button type='secondary' width={250}> Escritos </Button>
-          <Button type='secondary' width={250}> Presentaciones </Button>
-          <Button type='secondary' width={250}> Otros </Button>
+          <Button type='secondary' width={250}  onClick={()=>scroll('destacados')} > Podcasts </Button>
+          <Button type='secondary' width={250}  onClick={()=>scroll('articles')}> Escritos </Button>
+          <Button type='secondary' width={250}  onClick={()=>scroll('presentations')}> Presentaciones </Button>
+          <Button type='secondary' width={250}  onClick={()=>scroll('misc')}> Otros </Button>
         
         </nav>
    

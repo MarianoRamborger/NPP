@@ -1,21 +1,28 @@
 
 import withMain from "./withMain"
-import {Landing, Destacados, Articles, Presentations, Misc} from '../index'
+import {Landing, Destacados, Articles, Presentations, Misc, Footer} from '../index'
 import {COLORS} from '../../Constants/colors'
-import { rootCertificates } from "tls"
 
-const Main = () => {
+
+const Main = ({sections, scroll, destacados}) => {
+  const {landing, articles, presentations, misc, footer,} = sections
+
+
+
+
     return <div>
 
-      <Landing />
+      <Landing  scrollRef={landing} scroll={scroll}/>
      
-      <Destacados />
+      <Destacados scrollRef={destacados}/>
 
-      <Articles />
+      <Articles scrollRef={articles}/>
 
-      <Presentations />
+      <Presentations scrollRef={presentations}/>
 
-      <Misc />
+      <Misc  scrollRef={misc}/>
+
+      <Footer scrollRef={footer} scroll={scroll} />
 
 
 

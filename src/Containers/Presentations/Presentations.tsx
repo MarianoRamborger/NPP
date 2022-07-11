@@ -1,10 +1,10 @@
 import DD from "../../Components/DD/DD" //! Raw import in case I need to change the name
 
-const Presentations = () => {
+const Presentations = ({scrollRef}) => {
 
   return (
 
-  <section id="presentations" className="flexco">
+  <section id="presentations" className="flexco" ref={scrollRef}>
 
     <h3 className="section-header"> Presentaciones </h3>
 

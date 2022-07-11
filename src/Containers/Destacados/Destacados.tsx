@@ -1,8 +1,8 @@
 // import { COLORS } from "../../Constants/colors"
 
 
-const Destacados = () => {
-  return <section id="destacados" className="flexco">
+const Destacados = ({scrollRef}) => {
+  return <section id="destacados" className="flexco" ref={scrollRef}>
 
     <h3 style={{marginTop: 0}} className="section-header"> Cartelera </h3>
 

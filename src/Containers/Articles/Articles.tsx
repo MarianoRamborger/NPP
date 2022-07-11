@@ -1,5 +1,5 @@
-const Articles = () => {
-  return <section id='articles' className="flexco">
+const Articles = ({scrollRef}) => {
+  return <section id='articles' className="flexco" ref={scrollRef}>
 
       <h3 className='section-header'> Leeme en... </h3>
 
