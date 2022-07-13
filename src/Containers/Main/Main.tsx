@@ -16,9 +16,9 @@ const Main = ({sections, scroll, destacados}) => {
      
       <Destacados scrollRef={destacados}/>
 
-      <Articles scrollRef={articles}/>
-
       <Presentations scrollRef={presentations}/>
+
+      <Articles scrollRef={articles}/>
 
       <Misc  scrollRef={misc}/>
 
@@ -55,6 +55,8 @@ const Main = ({sections, scroll, destacados}) => {
       a:hover {
         color: ${COLORS.primaryBright}
       }
+
+    
       `}
     </style>
     </div>

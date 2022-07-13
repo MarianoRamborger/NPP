@@ -3,7 +3,7 @@ const MiscAvatar = ({img,src,alt = "", title=""}) => {
 
   return <a className="misc-avatar" href={src} target="_blank" rel="noreferrer"  >
       <img src={img} alt={alt} />
-      <p>   </p>
+      <p> {title} </p>
 
     <style>
       {`

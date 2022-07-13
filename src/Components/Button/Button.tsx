@@ -1,4 +1,4 @@
-import { COLORS } from "../Constants/colors"
+import { COLORS } from "../../Constants/colors"
 
 const Button = ({ type = 'primary', width=0, ...props}) => {
 

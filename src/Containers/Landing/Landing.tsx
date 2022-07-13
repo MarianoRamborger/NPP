@@ -15,7 +15,7 @@ const Landing = ({scrollRef, scroll}) => {
         </div>
         <h1> Lic Nicolas Crezcenci </h1>
 
-        <p> Texto de relleno Texto de relleno Texto de relleno Texto de relleno Texto de relleno Texto de relleno Texto de relleno</p>
+        <p> Psicólogo (UBA) <br/> Profesor y Coordinador de carrera (UAI) <br/> Game Designer (Da Vinci)</p>
 
         <div className="divider" style={{width: 300}}></div>
 
@@ -66,11 +66,14 @@ const Landing = ({scrollRef, scroll}) => {
           -webkit-box-shadow: 0px 0px 1px 1px #000000; 
           box-shadow: 0px 0px 5px 2px #000000;
           
-         
         }
 
         .landing-banner p, .landing-banner h1 {
           color: ${COLORS.textPrimary}
+        }
+
+        .landing-banner p {
+          text-align: center;
         }
 
         .landing-banner p {
