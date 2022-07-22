@@ -1,22 +1,41 @@
-// import { COLORS } from "../../Constants/colors"
-
+import { Avatar, DestDisplay } from "../../Components"
+import { Resources } from "../../Resources/Resources"
+import { useState } from "react"
 
 const Destacados = ({scrollRef}) => {
+  const [selDest, setSelDest] = useState("")
+  const [loading, setLoading] = useState(false)
+
+  const calch8 = () => {
+    //@ts-ignore
+    switch(selDest.type) {
+      case "youtube": return "500px"
+      case "spotify": return "300px"
+      default: return "200px"
+    }
+  }
+
   return <section id="destacados" className="flexco" ref={scrollRef}>
 
     <h3 style={{marginTop: 0}} className="section-header"> Cartelera </h3>
 
     <div className="destacados-div">
-      <div className="spotiframe">
-        <iframe style={{borderRadius: 12}} title="Videojuegos adictivos?" src="https://open.spotify.com/embed/episode/6DFaO6qWq9UoaKfoclNHMI?utm_source=generator" width="100%" height="232" frameBorder="0" allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      </div>
 
-      <div className="spotiframe">
-        <iframe style={{borderRadius: 12}} title="El juego del desestres" src="https://open.spotify.com/embed/episode/1wbRjWp7uFXNLZv6OSkled?utm_source=generator" width="100%" height="232" frameBorder="0" allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      </div>
+      {Resources.Destacados.map((r,index) => {
+        return <Avatar key={`dest-${index}`} img={require(`${r.imgUrl}`)} disabled={loading}
+        alt={r.title}  title={r.title} src={r.url} cb={()=>{ !loading && setSelDest(r)}}
+       />
 
-
+      })}
+     
     </div>
+
+    <div className={`destacados-display`}> 
+        <DestDisplay element={selDest} />
+    </div>
+
+
+   
 
     <style>
       {`
@@ -34,6 +53,15 @@ const Destacados = ({scrollRef}) => {
       .spotiframe {
         width: 550px;
       }
+
+      .destacados-display {
+        margin: 0 24px;
+        width: 1200px;
+        height: ${calch8()};
+        transition: height 0.35s ease;
+        border: 2px solid red;
+      }
+
       `}
     </style>
   </section>

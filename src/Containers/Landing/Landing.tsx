@@ -114,6 +114,8 @@ const Landing = ({scrollRef, scroll}) => {
           margin-top: auto;
 
         }
+
+        
         
       `}
     </style>

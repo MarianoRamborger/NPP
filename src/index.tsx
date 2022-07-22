@@ -4,6 +4,8 @@ import './index.css';
 import {Main} from './Containers/index'
 import { CtxProvider } from './Context/context';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "swiper/css/bundle";
+
 
 import reportWebVitals from './reportWebVitals';
 

@@ -46,7 +46,7 @@ const Button = ({ type = 'primary', width=0, ...props}) => {
 
   .btn-secondary:hover {
     background-color: ${COLORS.accent};
-    color: ${COLORS.primary};
+    color: ${COLORS.textPrimary};
 
   }
 

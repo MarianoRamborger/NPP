@@ -1,5 +1,5 @@
 import { COLORS } from "../../Constants/colors"
-import { BsFacebook, BsInstagram, BsLinkedin, BsWhatsapp, BsFillEnvelopeFill  } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsWhatsapp, BsFillEnvelopeFill  } from "react-icons/bs";
 import { MdKeyboardArrowUp } from "react-icons/md";
 
 const Footer = ({scrollRef, scroll}) => {

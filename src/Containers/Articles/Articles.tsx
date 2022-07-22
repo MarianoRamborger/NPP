@@ -1,3 +1,5 @@
+import { Resources } from "../../Resources/Resources"
+
 const Articles = ({scrollRef}) => {
   return <section id='articles' className="flexco" ref={scrollRef}>
 
@@ -5,12 +7,14 @@ const Articles = ({scrollRef}) => {
 
       <div className="articles-div">
 
-      <a href={"https://wg4fest.com/ludorama-revista-videojuegos"} target="_blank" rel="noreferrer">
-        <img src={require('./imgs/lud.webp')} alt='Ludorama' />
-      </a>
-      <a href={"https://fueradelacaja.mitiendanube.com/productos/desayunos-con-disenadores-2-preventa"}  target="_blank" rel="noreferrer">
-        <img src={require('./imgs/dis.jpeg')} alt='Desayuno con diseñadores' />
-      </a>
+      {Resources.Articulos.map((art, index) => {
+        return (
+          <a href={art.url} target="_blank" rel="noreferrer" key={`art-${index}`}>
+          <img src={require(`${art.imgUrl}`)} alt={art.title} />
+          </a>
+        )
+      })}
+   
 
       </div>
   

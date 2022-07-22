@@ -1,6 +1,8 @@
 
-import { MiscAvatar } from "../../Components"
-
+import { Resources } from '../../Resources/Resources';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination} from 'swiper';
+import 'swiper/css';
 
 const Misc = ({scrollRef}) => {
   return (
@@ -9,32 +11,46 @@ const Misc = ({scrollRef}) => {
 
       <div className="misc-div flexco">
 
-        <h3 className="section-header"> Otros Proyectos</h3>
+        <h3 className="section-header"> Actividades </h3>
 
-        <div className="misc-avs">
+      <div className='carousel-div'>
+        <Swiper className="mySwiper"
+        spaceBetween={50}
+        slidesPerView={1}
+        modules={[Navigation, Pagination]}
+        navigation={true}
+        pagination={true}
+        >
 
-          <MiscAvatar img={require('./jardin.jpg')} alt={"El jardin"}
-          title="El jardín" src={"https://www.instagram.com/eljardin.gs/"} />
+        {Resources.Misc.map((res,index) => {
+          return <SwiperSlide
+          >
+            <img key={`miscimg-${index}`}
+            src={require(`${res.imgUrl}`)} 
+            alt={res.title}/>
+       
+          </SwiperSlide>
 
-          <MiscAvatar img={require('./acevedo.png')} alt={"Los complejos de Acevedo"}
-          title="Los complejos de Acevedo" src={"https://loscomplejosdeacevedo.com/"} />
+        })}
 
-          <MiscAvatar img={require('./cuarenlit.jpg')} alt={"Cuarentena Literal"}
-          title="Cuarentena Literal" src={"https://open.spotify.com/show/6fiujHsuhZ7KFhDbTwAvkR?si=19af1a432eed468c&nd=1"} />
-
-        </div>
+        </Swiper>
+      </div>
 
       </div>
 
       <style>
         {`
-          .misc-avs {
-            margin-top: 50px;
-            display: flex;
-            flex-flow: row wrap;
+          .carousel-div {
             width: 1200px;
-            justify-content: space-between;
           }
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 800px ;
+            border-radius: 20px;
+            object-fit: cover;
+          }
+
       
         `
         }

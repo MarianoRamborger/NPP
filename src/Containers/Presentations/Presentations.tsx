@@ -16,7 +16,8 @@ const Presentations = ({scrollRef}) => {
     <div className="pres-div">
 
     {Resources.Presentaciones.map((pres, index) => {
-      return <DD title={pres.title} 
+      return <DD key={`pres-${index}`} 
+      title={pres.title} 
       source={pres.source} 
       position={index}
       setSelected={setPresSelected} 
