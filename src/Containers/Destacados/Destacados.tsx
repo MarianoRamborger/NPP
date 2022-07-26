@@ -10,7 +10,7 @@ const Destacados = ({scrollRef}) => {
   const calch8 = () => {
     //@ts-ignore
     switch(selDest.type) {
-      case "youtube": return "500px"
+      case "youtube": return "600px"
       case "spotify": return "238px"
       default: return "200px"
     }
@@ -56,7 +56,7 @@ const Destacados = ({scrollRef}) => {
       }
 
       .destacados-display {
-        margin: 0 24px;
+        margin-top: 48px;
         border: 2px solid ${COLORS.background};
         width: 1200px;
         height: ${calch8()};

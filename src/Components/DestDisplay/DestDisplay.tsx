@@ -17,7 +17,7 @@ const DestDisplay = ({element, setDestLoading}) => {
       case 'youtube' : return (
         <div className="embedded-wrapper" key={element.title} > 
           <Spinner loading={loading} setLoading={setLoading} setDestLoading={setDestLoading}/>
-        <iframe className="dd-video" width="1200" height="500" 
+        <iframe className="dd-video" width="1200" height="600" 
               src={element.url} title={element.title}  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
         </div>
       )
