@@ -12,7 +12,16 @@ code {
     monospace;
 }
 
+/* //? Could make them all be part of the same family, but that brings some compatibility issues in older browsers   */
+/* @font-face {
+  font-family: LSB;
+  src: local("LSB"),
+    url(./fonts/LeagueSpartan-ExtraBold.ttf) format("truetype");
+  font-weight: bold;
+} */
+
 * {
   font-family: Helvetica;
 }
+
 

@@ -49,6 +49,8 @@ const Destacados = ({scrollRef}) => {
         flex-flow: row wrap;
         width: 1200px;
         justify-content: space-between; 
+        margin-top: 48px;
+        margin-right: 36px;
 
       }
       .spotiframe {

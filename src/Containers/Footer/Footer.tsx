@@ -15,10 +15,10 @@ const Footer = ({scrollRef, scroll}) => {
         </div>
 
         <div className="footer-icons-div"  >
-          <BsInstagram className="footer-icon"/>
-          <BsLinkedin className="footer-icon"/>
-          <BsWhatsapp className="footer-icon"/>
-          <BsFillEnvelopeFill className="footer-icon"/>
+          <a href="https://instagram.com/cafesarcasmo" target="blank" rel="noreferrer"> <BsInstagram className="footer-icon"/> </a>
+          <a href="https://www.linkedin.com/in/nicolascrescenzi/" target="blank" rel="noreferrer"> <BsLinkedin className="footer-icon"/> </a>
+          <a href="https://api.whatsapp.com/send?phone=541151275602" target="blank" rel="noreferrer"> <BsWhatsapp className="footer-icon"/> </a>
+          <a href="nmatiasc@gmail.com" target="blank" rel="noreferrer">  <BsFillEnvelopeFill className="footer-icon"/></a>
         </div>
 
       </div>
