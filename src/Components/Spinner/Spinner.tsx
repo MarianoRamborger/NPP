@@ -1,6 +1,10 @@
 
-const Spinner = () => {
-  return <div className="loader">
+const Spinner = ({loading, setLoading, setDestLoading}) => {
+  if (setLoading) {
+    setTimeout(() => {setLoading(false);setDestLoading(false)}, 750)
+  }
+
+  return  loading ? <div className="loader">
 
     <style> {`
    .loader {
@@ -10,12 +14,12 @@ const Spinner = () => {
     width: 11em;
     height: 11em;
     border-radius: 50%;
-    background: #ff0000;
-    background: -moz-linear-gradient(left, #ff0000 10%, rgba(255,0,0, 0) 42%);
-    background: -webkit-linear-gradient(left, #ff0000 10%, rgba(255,0,0, 0) 42%);
-    background: -o-linear-gradient(left, #ff0000 10%, rgba(255,0,0, 0) 42%);
-    background: -ms-linear-gradient(left, #ff0000 10%, rgba(255,0,0, 0) 42%);
-    background: linear-gradient(to right, #ff0000 10%, rgba(255,0,0, 0) 42%);
+    background: #8c7d69;
+    background: -moz-linear-gradient(left, #8c7d69 10%, rgba(140,125,105, 0) 42%);
+    background: -webkit-linear-gradient(left, #8c7d69 10%, rgba(140,125,105, 0) 42%);
+    background: -o-linear-gradient(left, #8c7d69 10%, rgba(140,125,105, 0) 42%);
+    background: -ms-linear-gradient(left, #8c7d69 10%, rgba(140,125,105, 0) 42%);
+    background: linear-gradient(to right, #8c7d69 10%, rgba(140,125,105, 0) 42%);
     position: relative;
     -webkit-animation: load3 1.4s infinite linear;
     animation: load3 1.4s infinite linear;
@@ -26,7 +30,7 @@ const Spinner = () => {
   .loader:before {
     width: 50%;
     height: 50%;
-    background: #ff0000;
+    background: #8c7d69;
     border-radius: 100% 0 0 0;
     position: absolute;
     top: 0;
@@ -34,7 +38,7 @@ const Spinner = () => {
     content: '';
   }
   .loader:after {
-    background: #000000;
+    background: #f0f2ef;
     width: 75%;
     height: 75%;
     border-radius: 50%;
@@ -67,8 +71,11 @@ const Spinner = () => {
     }
   }
   
+  }
+  
     `}</style>
   </div>
+  : null
   
 }
 
