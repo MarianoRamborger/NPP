@@ -14,7 +14,7 @@ const Main = ({sections, scroll, destacados}) => {
 
       <Landing  scrollRef={landing} scroll={scroll}/>
      
-      <Destacados scrollRef={destacados}/>
+      {/* <Destacados scrollRef={destacados}/>
 
       <Presentations scrollRef={presentations}/>
 
@@ -22,7 +22,7 @@ const Main = ({sections, scroll, destacados}) => {
 
       <Misc  scrollRef={misc}/>
 
-      <Footer scrollRef={footer} scroll={scroll} />
+      <Footer scrollRef={footer} scroll={scroll} /> */}
 
 
 

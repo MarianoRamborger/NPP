@@ -13,7 +13,7 @@ const Landing = ({scrollRef, scroll}) => {
         <div className='pic-circle'>
           <img height={200} width={200} src={require('./imgs/avatar.jpg')} alt="Avatar"/>
         </div>
-        <h1> Lic Nicolas Crezcenci </h1>
+        <h1 > Lic Nicolas Crezcenci </h1>
 
         <p className='l-subtt'> Psicólogo (UBA) <br/> Profesor y Coordinador de carrera (UAI) <br/> Game Designer (Da Vinci)</p>
 
@@ -69,7 +69,8 @@ const Landing = ({scrollRef, scroll}) => {
         }
 
         .landing-banner p, .landing-banner h1 {
-          color: ${COLORS.textPrimary}
+          color: ${COLORS.textPrimary};
+          font-size: 2em;
         }
 
         .landing-banner p {
@@ -77,7 +78,7 @@ const Landing = ({scrollRef, scroll}) => {
         }
 
         .landing-banner p {
-          font-size: 22px;
+          font-size: 28px;
           width: 600px;
         }
 
@@ -89,21 +90,19 @@ const Landing = ({scrollRef, scroll}) => {
         }
 
         .l-subtt {
-          line-height: 30px;
+          line-height: 38px;
         }
 
         .divider {
           border-bottom: 3.5px solid ${COLORS.background};
-          margin-top: 50px;
+          margin-top: 45px;
         }
-
-    
 
         .landing-icons-div {
           display: flex;
           width: 600px;
           justify-content: space-evenly;;
-          margin-top: 75px;
+          margin-top: 50px;
           
         }
 
@@ -118,7 +117,6 @@ const Landing = ({scrollRef, scroll}) => {
         }
 
    
-
         .landing-nav {
           display: flex;
           flex-flow: row wrap;
@@ -129,7 +127,119 @@ const Landing = ({scrollRef, scroll}) => {
 
         }
 
-     
+        @media only screen and (max-width: 1200px) { 
+          .landing-banner {
+            width: 1000px;
+            height: 500px;
+          }
+          .landing-banner p {           
+            font-size: 24px;
+            width: 600px;
+          }
+          .landing-banner h1 {
+            margin-bottom: 10px;
+          }
+          .landing-icons-div {
+            margin-top: 40px;
+          }
+          .landing-icon {
+            font-size: 20px;
+          }
+          .l-subtt {
+            line-height: 32px;
+          }
+          .divider {
+            margin-top: 15px;
+          }
+          .landing-nav button {
+            font-size: 20px;
+            max-width: 100px;
+          }
+          
+        }
+
+        /* MOBILE */  
+        @media only screen and (max-width: 999px) {  
+          .landing-banner {
+            width: 400px;
+            height: 275px;
+            margin: auto;
+          }
+          .landing-banner h1 {
+            font-size: 1.5em;
+          }
+          .landing-banner p {           
+            font-size: 15px;
+            width: 350px;
+          }
+          .landing-icons-div {
+            margin-top: 15px;
+            width: 400px;
+          }
+          .landing-icon {
+            font-size: 18px;
+          }
+          .divider {
+            margin-top: 15px;  
+            margin-bottom: 10px;    
+          }
+          .l-subtt {
+            margin: 0px;
+            line-height: 20px;
+          }
+          .landing-icons-div a {
+            text-align: center;
+            width: 100px;
+          }
+          .landing-nav button {
+            font-size: 14px;
+            max-width: 100px;
+            width: 100px;
+            margin: 0px;
+            padding: 5px 0px;
+          }
+          .pic-circle img {
+            width: 135px;
+            height: 135px;
+          }
+
+        }
+
+        @media only screen and (max-width: 399px) {  
+          .landing-banner {
+            width: 320px;
+            height: 220px;
+            margin: auto;
+          }
+          .landing-banner h1 {
+            font-size: 1.25em;
+            margin: 7.5px 0px;
+          }
+          .landing-banner p {           
+            font-size: 13px;
+          }
+          .landing-icons-div, .landing-banner p {
+            width: 320px;
+          }
+          .landing-icons-div a {
+            text-align: center;
+            width: 80px;
+          }
+          .landing-nav button {
+            font-size: 10.5px;
+            width: 80px;
+            margin: 0px;
+            padding: 5px;
+          }
+
+
+
+
+          .pic-circle img {
+            width: 125px;
+            height: 125px;
+          }
+        }
 
         
         
