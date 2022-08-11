@@ -24,25 +24,59 @@ const Presentations = ({scrollRef}) => {
       currentSelected={presSelected}/>
     })}
 
-    
-    
-    {/* <DD title={} source={}/> */}
     </div>
 
     <style>
       {
         `
         #presentations {
-          margin-top: 100px;
+          justify-content: center !important;
+          justify-items: center !important;
         }
         .pres-div {  
           transition: height 0.4s ease;
-       
           width: 1200px;
         }
+        
+        @media only screen and (max-width: 1200px) {  
+          .pres-div, .dd-div  {  
+            width: 1000px;
+          }
+          .dd-title {
+            font-size: 22px;
+            text-overflow: ellipsis;
+          }
 
-     
+        }
 
+        @media only screen and (max-width: 999px) {  
+          .pres-div, .dd-div  {  
+            width: 399px;
+          }
+          .pres-div {
+            margin-top: 20px;
+          }
+
+          .dd-title {
+            font-size: 16px; 
+          }
+
+          .dd-vid-container, .dd-vid-container iframe, .dd-display {
+            height: 250px;
+            width: 399px;
+          }
+        }
+
+        @media only screen and (max-width: 382px) {  
+          .pres-div, .dd-div  {  
+            width: 320px;
+          }
+          .dd-vid-container, .dd-vid-container iframe, .dd-display {
+            height: 200px;
+            width: 320px;
+          }
+
+        }
         `
       }
     </style>

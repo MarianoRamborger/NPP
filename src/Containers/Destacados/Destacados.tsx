@@ -4,7 +4,7 @@ import { useState } from "react"
 import { COLORS } from "../../Constants/colors"
 
 const Destacados = ({scrollRef}) => {
-  const [selDest, setSelDest] = useState("")
+  const [selDest, setSelDest] = useState({type: ''})
   const [destLoading, setDestLoading] = useState(false)
 
   const calch8 = () => {
@@ -12,9 +12,10 @@ const Destacados = ({scrollRef}) => {
     switch(selDest.type) {
       case "youtube": return "600px"
       case "spotify": return "238px"
-      default: return "200px"
+      default: return "0px"
     }
   }
+  
 
   return <section id="destacados" className="flexco" ref={scrollRef}>
 
@@ -25,6 +26,7 @@ const Destacados = ({scrollRef}) => {
       {Resources.Destacados.map((r,index) => {
         return <Avatar key={`dest-${index}`} img={require(`${r.imgUrl}`)} disabled={destLoading}
         alt={r.title}  title={r.title} src={r.url} cb={()=>{ !destLoading &&  setDestLoading(true);setSelDest(r)}}
+        className={"avatar-resp"}
        />
 
       })}
@@ -41,7 +43,7 @@ const Destacados = ({scrollRef}) => {
     <style>
       {`
       #destacados {
-        
+       
       }
       
       .destacados-div {
@@ -50,8 +52,6 @@ const Destacados = ({scrollRef}) => {
         width: 1200px;
         justify-content: space-between; 
         margin-top: 48px;
-        margin-right: 36px;
-
       }
       .spotiframe {
         width: 550px;
@@ -63,8 +63,95 @@ const Destacados = ({scrollRef}) => {
         width: 1200px;
         height: ${calch8()};
         transition: height 0.35s ease;
+      }
+
+      
+      ${selDest.type === "youtube" ? `
+        .destacados-display iframe { 
+          height: 600px;
+        }` : ''}
+      
+
+        @media only screen and (max-width: 1200px) {
+        .destacados-div, .destacados-display {
+          width: 1000px;
+        
+        }
+        
+        ${selDest.type === "youtube" ? `
+        .destacados-display iframe { 
+          height: 450px;
+        }` : ''}
+
+        .avatar-resp img {
+          width: 200px;
+          height: 200px;
+        }
+
+        .avatar-resp p {
+          font-size: 20px;
+        }
+        
+      }
+
+      @media only screen and (max-width: 999px) {   
+          
+        .destacados-div, .destacados-display  {
+          width: 399px;
+        }
+
+        .section-header {
+          padding-top: 10px;
+          margin-bottom: 0px;
+        }
+
+        .section-header {
+          font-size: 48px !important;
+        }
+
+        ${selDest.type === "youtube" ? `
+        .destacados-display iframe, .destacados-display { 
+          height: 250px;
+        }` : ''}
+
+
+        .avatar-resp img {
+          width: 100px;
+          height: 100px;
+        }
+        .avatar-resp p {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 382px) { 
+        .destacados-div, .destacados-display  {
+          width: 320px;
+        
+          margin-left: 0px;
+          padding: 0px;
+        }
+        .avatar-resp img {
+          width: 90px;
+          height: 90px;
+        }
+
+        .section-header {
+          font-size: 40px !important;
+        }
+
+        ${selDest.type === "youtube" ? `
+        .destacados-display iframe, .destacados-display { 
+          height: 200px;
+        }` : ''}
+        
+        .avatar-resp p {
+          display: none;
+        }
+        
 
       }
+
 
    
 

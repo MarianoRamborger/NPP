@@ -207,8 +207,40 @@ const Landing = ({scrollRef, scroll}) => {
 
         @media only screen and (max-width: 399px) {  
           .landing-banner {
+            width: 360px;
+            height: 225px;
+            margin: auto;
+          }
+          .landing-banner h1 {
+            font-size: 1.25em;
+            margin: 7.5px 0px;
+          }
+          .landing-banner p {           
+            font-size: 13px;
+          }
+          .landing-icons-div, .landing-banner p {
+            width: 360px;
+          }
+          .landing-icons-div a {
+            text-align: center;
+            width: 80px;
+          }
+          .landing-nav button {
+            font-size: 12px;
+            width: 90px;
+            margin: 0px;
+            padding: 5px 0px;
+          }
+          .pic-circle img {
+            width: 125px;
+            height: 125px;
+          }
+        }
+
+        @media only screen and (max-width: 359px) {  
+          .landing-banner {
             width: 320px;
-            height: 220px;
+            height: 225px;
             margin: auto;
           }
           .landing-banner h1 {
@@ -226,15 +258,11 @@ const Landing = ({scrollRef, scroll}) => {
             width: 80px;
           }
           .landing-nav button {
-            font-size: 10.5px;
+            font-size: 11px;
             width: 80px;
             margin: 0px;
-            padding: 5px;
+            padding: 5px 0px;
           }
-
-
-
-
           .pic-circle img {
             width: 125px;
             height: 125px;

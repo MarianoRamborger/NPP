@@ -7,17 +7,15 @@ import {COLORS} from '../../Constants/colors'
 const Main = ({sections, scroll, destacados}) => {
   const {landing, articles, presentations, misc, footer,} = sections
 
-
-
-
     return <div>
 
       <Landing  scrollRef={landing} scroll={scroll}/>
      
-      {/* <Destacados scrollRef={destacados}/>
+       <Destacados scrollRef={destacados}/>
 
       <Presentations scrollRef={presentations}/>
 
+{/*
       <Articles scrollRef={articles}/>
 
       <Misc  scrollRef={misc}/>

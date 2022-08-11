@@ -15,7 +15,7 @@ const DD = ({title, source, position, setSelected, currentSelected}) => {
      
         {currentSelected === position ? (
           <div className="dd-vid-container loader"> 
-            <iframe className="dd-video" width="1200" height="500" 
+            <iframe className="dd-video"
             src={source} title={title}  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
             
           </div>
@@ -54,12 +54,15 @@ const DD = ({title, source, position, setSelected, currentSelected}) => {
           width: 100%;
           
         }
-     
         .dd-vid-container {
           height: 500px;
           width: 1200px;
           background-color: black;
-      
+        }
+        
+        .dd-vid-container iframe {
+          height: 500px;
+          width: 1200px;
         }
 
       `

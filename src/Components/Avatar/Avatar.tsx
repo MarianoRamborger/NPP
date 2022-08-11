@@ -1,7 +1,7 @@
 import { COLORS } from "../../Constants/colors"
-const Avatar = ({img,src,alt = "", title="", cb, disabled = false}) => {
+const Avatar = ({img,src,alt = "", title="", cb, disabled = false, className=""}) => {
 
-  return <div className="misc-avatar" onClick={cb}>
+  return <div className={`misc-avatar ${className}`} onClick={cb}>
       <img src={img} alt={alt} />
       <p> {title} </p>
 
