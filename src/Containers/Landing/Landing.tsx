@@ -224,6 +224,7 @@ const Landing = ({scrollRef, scroll}) => {
           .landing-icons-div a {
             text-align: center;
             width: 80px;
+            
           }
           .landing-nav button {
             font-size: 12px;
@@ -235,12 +236,22 @@ const Landing = ({scrollRef, scroll}) => {
             width: 125px;
             height: 125px;
           }
+
+          .landing-icons-div {
+            margin-top: 0px;
+            width: 260px !important;
+          }
+
+          .landing-icons-div a {
+            width: 50px;
+          }
+          
         }
 
         @media only screen and (max-width: 359px) {  
           .landing-banner {
             width: 320px;
-            height: 225px;
+            height: 215px;
             margin: auto;
           }
           .landing-banner h1 {

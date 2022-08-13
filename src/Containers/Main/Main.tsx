@@ -30,10 +30,8 @@ const Main = ({sections, scroll, destacados}) => {
         background-color: ${COLORS.background};
       }
       .section-header {
-        font-size: 64px;
-        
+        font-size: 64px; 
         color: ${COLORS.primary};
-        text-shadow: 0px 0px 3px black;
       }
 
       .flexco {

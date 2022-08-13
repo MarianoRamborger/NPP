@@ -89,7 +89,7 @@ const Footer = ({scrollRef, scroll}) => {
         @media only screen and (max-width: 500px) { 
            
           .footer-div { 
-            height: 115px;
+            height: 130px;
             margin-top: 100px;
           }
           .footer-icons-div { 
@@ -107,6 +107,7 @@ const Footer = ({scrollRef, scroll}) => {
           .cp-div { 
             font-size: 14px;
             margin-top: auto;
+            padding-bottom: 10px;
           }
         }
 

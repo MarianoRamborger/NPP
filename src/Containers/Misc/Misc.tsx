@@ -48,7 +48,8 @@ const Misc = ({scrollRef}) => {
             width: 100%;
             height: 800px ;
             border-radius: 20px;
-            object-fit: cover;
+            object-fit: contain;
+       
           }
 
 
@@ -66,8 +67,9 @@ const Misc = ({scrollRef}) => {
               margin-top: 20px;
               width: 400px;
             }
+       
             .swiper-slide img { 
-              height: 300px ;
+              height: 450px ;
             }
           }
 
@@ -75,9 +77,11 @@ const Misc = ({scrollRef}) => {
             .carousel-div {
               width: 310px;
             }
+
             .swiper-slide img { 
-              height: 290px ;
+              height: 400px ;
             }
+            
           }
 
       
