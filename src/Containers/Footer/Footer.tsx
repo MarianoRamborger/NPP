@@ -24,7 +24,7 @@ const Footer = ({scrollRef, scroll}) => {
       </div>
 
       <div className="cp-div">
-          
+          Mariano Ramborger © 2022
       </div>
 
     </div>
@@ -77,15 +77,36 @@ const Footer = ({scrollRef, scroll}) => {
           font-size: 60px;
         }
 
-        @media only screen and (max-width: 500px) {  \
+        .cp-div {
+          color: ${COLORS.primaryDark};
+          text-align: center;
+          margin-top: 48px;
+          font-size: 20px;
+          font-weight: 800;
+
+        }
+
+        @media only screen and (max-width: 500px) { 
+           
           .footer-div { 
-            height: 200px
+            height: 115px;
+            margin-top: 100px;
           }
           .footer-icons-div { 
             width: 320px;
+            margin-top: 15px;
           }
           .footer-icon {
             font-size: 25px;
+          }
+
+          .scrolltop-div { 
+            margin-top: 15px;
+          }
+
+          .cp-div { 
+            font-size: 14px;
+            margin-top: auto;
           }
         }
 

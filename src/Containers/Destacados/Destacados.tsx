@@ -95,6 +95,7 @@ const Destacados = ({scrollRef}) => {
       }
 
       @media only screen and (max-width: 999px) {   
+
           
         .destacados-div, .destacados-display  {
           width: 399px;
@@ -125,6 +126,11 @@ const Destacados = ({scrollRef}) => {
       }
 
       @media only screen and (max-width: 382px) { 
+        
+        #destacados {
+          margin-top: 10px;
+        }
+
         .destacados-div, .destacados-display  {
           width: 320px;
         
