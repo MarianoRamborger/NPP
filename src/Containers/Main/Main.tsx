@@ -15,12 +15,12 @@ const Main = ({sections, scroll, destacados}) => {
 
       <Presentations scrollRef={presentations}/>
 
-{/*
       <Articles scrollRef={articles}/>
 
       <Misc  scrollRef={misc}/>
+  
 
-      <Footer scrollRef={footer} scroll={scroll} /> */}
+      <Footer scrollRef={footer} scroll={scroll} /> 
 
 
 

@@ -76,6 +76,21 @@ const Footer = ({scrollRef, scroll}) => {
         .scrolltop-div * {
           font-size: 60px;
         }
+
+        @media only screen and (max-width: 500px) {  \
+          .footer-div { 
+            height: 200px
+          }
+          .footer-icons-div { 
+            width: 320px;
+          }
+          .footer-icon {
+            font-size: 25px;
+          }
+        }
+
+
+
     `}</style>
 
   </section>

@@ -53,6 +53,43 @@ const Articles = ({scrollRef}) => {
           box-shadow: 0px 0px 16px 3px #000000;
         }
       }
+
+      @media only screen and (max-width: 1200px) { 
+        .articles-div {
+          width: 1000px;
+          justify-content: space-evenly; 
+        }
+
+        .articles-div img {
+          width: 250px;
+        }
+      }
+
+      @media only screen and (max-width: 999px) { 
+        .articles-div {
+          width: 400px;
+          margin-top: 20px;
+        }
+
+        #articles {
+          margin-top: 0px;
+        }
+
+        .articles-div img {
+          width: 150px;
+        }
+      }
+
+      @media only screen and (max-width: 359px) {  
+        .articles-div {
+          width: 320px;
+        }
+
+        .articles-div img {
+          width: 125px;
+        }
+
+      }
     `}
     </style>
   </section>

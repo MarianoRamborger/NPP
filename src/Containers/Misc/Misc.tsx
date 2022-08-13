@@ -51,6 +51,35 @@ const Misc = ({scrollRef}) => {
             object-fit: cover;
           }
 
+
+          @media only screen and (max-width: 1200px) { 
+            .carousel-div {
+              width: 1000px;
+            }
+            .swiper-slide img { 
+              height: 600px ;
+            }
+          }
+
+          @media only screen and (max-width: 999px) { 
+            .carousel-div {
+              margin-top: 20px;
+              width: 400px;
+            }
+            .swiper-slide img { 
+              height: 300px ;
+            }
+          }
+
+          @media only screen and (max-width: 359px) { 
+            .carousel-div {
+              width: 310px;
+            }
+            .swiper-slide img { 
+              height: 290px ;
+            }
+          }
+
       
         `
         }
