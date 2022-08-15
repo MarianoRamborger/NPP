@@ -52,6 +52,12 @@ const Main = ({sections, scroll, destacados}) => {
         color: ${COLORS.primaryBright}
       }
 
+      @media only screen and (max-width: 999px) {  
+        .section-header {
+          margin-top: 5px; 
+        }
+      }
+
     
       `}
     </style>
