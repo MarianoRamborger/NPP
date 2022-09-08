@@ -13,7 +13,7 @@ const Landing = ({scrollRef, scroll}) => {
         <div className='pic-circle'>
           <img height={200} width={200} src={require('./imgs/avatar.jpg')} alt="Avatar"/>
         </div>
-        <h1 > Lic Nicolas Crezcenci </h1>
+        <h1 > Lic Nicolas Crescenzi </h1>
 
         <p className='l-subtt'> Psicólogo (UBA) <br/> Profesor y Coordinador de carrera (UAI) <br/> Game Designer (Da Vinci)</p>
 
