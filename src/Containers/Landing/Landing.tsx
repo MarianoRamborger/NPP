@@ -47,7 +47,6 @@ const Landing = ({scrollRef, scroll}) => {
         #landing {
           height: 100vh;
           background-color: ${COLORS.background};
-          background-color: blue;
           display: flex;
           flex-flow: column wrap;
           justify-content: center;
