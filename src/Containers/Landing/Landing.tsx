@@ -55,6 +55,7 @@ const Landing = ({scrollRef, scroll}) => {
 
         .landing-banner {
           height: 600px;
+          max-height: 100vh; 
           width: 1200px;
           margin: auto;
           background-color: ${COLORS.primary};
@@ -127,9 +128,37 @@ const Landing = ({scrollRef, scroll}) => {
 
         }
 
+        @media only screen and (max-height: 700px) {
+ 
+          .landing-banner p {
+            font-size: 16px;
+          }
+          .pic-circle img { 
+            width: 150px;
+            height: 150px;
+          }
+          .landing-icon { 
+            font-size: 24px;
+          }
+          .landing-banner h1 {
+            font-size: 20px;
+          }
+          .landing-nav button {
+            font-size: 16px;
+            max-width: 150px;
+          }
+          .landing-icons-div {
+            margin-top: 30px;
+          }
+          .divider {
+            margin-top: 8px;
+          }
+
+        }
+
         @media only screen and (max-width: 1200px) { 
           .landing-banner {
-            width: 1000px;
+            width: 900px;
             height: 500px;
           }
           .landing-banner p {           
@@ -152,10 +181,19 @@ const Landing = ({scrollRef, scroll}) => {
             margin-top: 15px;
           }
           .landing-nav button {
-            font-size: 20px;
-            max-width: 100px;
+            font-size: 16px;
+            max-width: 150px;
           }
           
+        }
+
+        
+        @media only screen and (max-height: 700px) {
+          .landing-banner {
+              height: 400px;
+              width: 800px;
+
+          }
         }
 
         /* MOBILE */  
